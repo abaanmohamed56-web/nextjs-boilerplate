@@ -1,0 +1,223 @@
+/* SkillPips Intro Animation Styles */
+
+.intro-root {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0;
+  user-select: none;
+}
+
+/* golden vignette */
+.intro-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 35%,
+    rgba(212, 175, 55, 0.04) 60%,
+    rgba(212, 175, 55, 0.12) 85%,
+    rgba(180, 140, 20, 0.22) 100%
+  );
+  z-index: 20;
+}
+
+/* particle canvas layer */
+.intro-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* all scene layers stack in center */
+.intro-scene {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.35s ease;
+  z-index: 5;
+}
+
+/* ── Scene 1: grid + candles ── */
+.intro-scene--grid {
+  pointer-events: none;
+}
+
+.intro-grid-svg {
+  width: min(90vw, 640px);
+  height: auto;
+}
+
+/* ── Scene 2: bull & bear ── */
+.intro-scene--creatures {
+  gap: clamp(40px, 14vw, 160px);
+  flex-direction: row;
+  pointer-events: none;
+}
+
+.intro-creature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  transition: transform 0.1s linear;
+  filter: drop-shadow(0 0 18px rgba(212, 175, 55, 0.45));
+}
+
+.intro-creature--bear {
+  /* bear faces right naturally */
+}
+
+.intro-creature--bull {
+  transform: scaleX(-1);
+}
+
+/* energy line between bull & bear */
+.intro-energy-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: clamp(120px, 28vw, 320px);
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(212, 175, 55, 0.8) 40%,
+    rgba(248, 231, 161, 1) 50%,
+    rgba(212, 175, 55, 0.8) 60%,
+    transparent 100%
+  );
+  border-radius: 2px;
+  filter: blur(1px) drop-shadow(0 0 8px rgba(212, 175, 55, 0.9));
+  transform-origin: center;
+}
+
+/* ── Scene 3: logo ── */
+.intro-scene--logo {
+  pointer-events: none;
+  will-change: transform, opacity, filter;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.intro-shine-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+/* metallic shine sweep */
+.intro-shine {
+  position: absolute;
+  top: -20%;
+  width: 28%;
+  height: 140%;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.0) 30%,
+    rgba(255, 248, 200, 0.85) 50%,
+    rgba(255, 255, 255, 0.0) 70%,
+    transparent 100%
+  );
+  transform: skewX(-15deg);
+  pointer-events: none;
+  transition: opacity 0.1s linear;
+}
+
+/* ── Scene 4: text ── */
+.intro-scene--text {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: clamp(60px, 14vh, 130px);
+  pointer-events: none;
+  will-change: transform, opacity;
+  z-index: 11;
+}
+
+.intro-brand-text {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: clamp(22px, 4.5vw, 52px);
+  letter-spacing: 0.28em;
+  color: #D4AF37;
+  background: linear-gradient(180deg, #F8E7A1 0%, #D4AF37 50%, #9A7421 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+/* glossy reflection — flipped copy below */
+.intro-brand-reflection {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: clamp(22px, 4.5vw, 52px);
+  letter-spacing: 0.28em;
+  color: #D4AF37;
+  background: linear-gradient(180deg, #9A7421 0%, transparent 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transform: scaleY(-1);
+  margin-top: 2px;
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* ── Lens flare ── */
+.intro-lens-flare {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(60vw, 520px);
+  height: min(60vw, 520px);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(248, 231, 161, 0.22) 0%,
+    rgba(212, 175, 55, 0.12) 30%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 9;
+}
+
+/* ── Controls overlay ── */
+.intro-controls {
+  position: absolute;
+  bottom: clamp(16px, 4vh, 32px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+}
+
+.intro-btn {
+  background: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.6);
+  color: #D4AF37;
+  font-family: 'Georgia', serif;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  padding: 10px 28px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.intro-btn:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: rgba(212, 175, 55, 0.9);
+}
