@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="goldG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F4D87A"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#9A7421"/>
+    </linearGradient>
+    <linearGradient id="goldH" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F4D87A"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#9A7421"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Shield clip -->
+    <clipPath id="shieldClip">
+      <path d="M540 88 L870 168 Q870 560 540 870 Q210 560 210 168 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Black background -->
+  <rect width="1080" height="1080" fill="#000"/>
+
+  <!-- ── Shield body ── -->
+  <!-- Gold border -->
+  <path d="M540 80 L880 164 Q882 570 540 882 Q198 570 198 164 Z"
+        fill="url(#goldG)" filter="url(#glow)"/>
+  <!-- Inner shield -->
+  <path d="M540 104 L858 180 Q860 558 540 854 Q220 558 220 180 Z"
+        fill="#0B2D1E"/>
+
+  <!-- Quadrant fills (clipped to shield) -->
+  <!-- Top-left: crimson -->
+  <rect x="220" y="104" width="320" height="348" fill="#6B1A1A" clip-path="url(#shieldClip)"/>
+  <!-- Top-right: dark teal -->
+  <rect x="540" y="104" width="320" height="348" fill="#0B2D1E" clip-path="url(#shieldClip)"/>
+  <!-- Bottom-left: dark teal -->
+  <rect x="220" y="452" width="320" height="402" fill="#0B2D1E" clip-path="url(#shieldClip)"/>
+  <!-- Bottom-right: crimson -->
+  <rect x="540" y="452" width="320" height="402" fill="#6B1A1A" clip-path="url(#shieldClip)"/>
+
+  <!-- Gold cross dividers -->
+  <rect x="528" y="104" width="24" height="750" fill="url(#goldG)" clip-path="url(#shieldClip)" opacity="0.7"/>
+  <rect x="220" y="440" width="640" height="24" fill="url(#goldH)" clip-path="url(#shieldClip)" opacity="0.7"/>
+
+  <!-- Second inner border -->
+  <path d="M540 112 L850 186 Q852 555 540 844 Q228 555 228 186 Z"
+        fill="none" stroke="url(#goldG)" stroke-width="4" opacity="0.7"/>
+
+  <!-- ── Bear silhouette (top-left quadrant) ── -->
+  <g clip-path="url(#shieldClip)" fill="url(#goldG)" filter="url(#glow)">
+    <!-- Body -->
+    <ellipse cx="350" cy="310" rx="100" ry="62"/>
+    <!-- Head -->
+    <ellipse cx="438" cy="258" rx="52" ry="44"/>
+    <!-- Ears -->
+    <ellipse cx="405" cy="220" rx="20" ry="18"/>
+    <ellipse cx="450" cy="215" rx="20" ry="18"/>
+    <!-- Snout -->
+    <ellipse cx="482" cy="268" rx="24" ry="17"/>
+    <!-- Legs -->
+    <rect x="266" y="362" width="28" height="48" rx="6"/>
+    <rect x="308" y="366" width="28" height="44" rx="6"/>
+    <rect x="352" y="366" width="28" height="44" rx="6"/>
+    <rect x="396" y="362" width="28" height="48" rx="6"/>
+    <!-- Tail -->
+    <circle cx="256" cy="302" r="16"/>
+  </g>
+
+  <!-- ── Bull silhouette (top-right quadrant) ── -->
+  <g clip-path="url(#shieldClip)" fill="url(#goldG)" filter="url(#glow)">
+    <!-- Body -->
+    <ellipse cx="722" cy="312" rx="105" ry="64"/>
+    <!-- Neck + head -->
+    <ellipse cx="626" cy="260" rx="50" ry="56"/>
+    <!-- Horns -->
+    <path d="M598 220 Q560 172 578 148 Q600 172 608 216 Z"/>
+    <path d="M655 215 Q690 168 672 144 Q650 168 644 214 Z"/>
+    <!-- Snout -->
+    <ellipse cx="584" cy="276" rx="28" ry="20"/>
+    <!-- Ear -->
+    <ellipse cx="598" cy="230" rx="17" ry="12" transform="rotate(-25 598 230)"/>
+    <!-- Legs -->
+    <rect x="634" y="366" width="30" height="52" rx="6"/>
+    <rect x="674" y="370" width="30" height="48" rx="6"/>
+    <rect x="714" y="370" width="30" height="48" rx="6"/>
+    <rect x="754" y="366" width="30" height="52" rx="6"/>
+    <!-- Tail -->
+    <path d="M824 300 Q855 282 850 260 Q844 244 832 252" fill="none" stroke="url(#goldG)" stroke-width="14" stroke-linecap="round"/>
+  </g>
+
+  <!-- ── Large S monogram ── -->
+  <text x="540" y="620" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-weight="900" font-size="360"
+        fill="url(#goldG)" filter="url(#glow)"
+        stroke="#2a1a00" stroke-width="4">S</text>
+
+  <!-- ── Up arrow (bottom-left) ── -->
+  <g clip-path="url(#shieldClip)" stroke="url(#goldG)" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <line x1="312" y1="740" x2="445" y2="570" stroke-width="14"/>
+    <polyline points="412,572 445,570 443,603" stroke-width="12" fill="url(#goldG)"/>
+  </g>
+
+  <!-- ── Candlestick chart (bottom-right) ── -->
+  <g clip-path="url(#shieldClip)">
+    <!-- Candle 1 -->
+    <line x1="588" y1="560" x2="588" y2="760" stroke="url(#goldG)" stroke-width="5"/>
+    <rect x="572" y="610" width="32" height="100" fill="#8B1A1A" stroke="url(#goldG)" stroke-width="3" rx="2"/>
+    <!-- Candle 2 -->
+    <line x1="648" y1="545" x2="648" y2="750" stroke="url(#goldG)" stroke-width="5"/>
+    <rect x="632" y="580" width="32" height="130" fill="#8B1A1A" stroke="url(#goldG)" stroke-width="3" rx="2"/>
+    <!-- Candle 3 -->
+    <line x1="708" y1="558" x2="708" y2="755" stroke="url(#goldG)" stroke-width="5"/>
+    <rect x="692" y="595" width="32" height="110" fill="#8B1A1A" stroke="url(#goldG)" stroke-width="3" rx="2"/>
+  </g>
+
+  <!-- ── Ribbon banner ── -->
+  <path d="M175 820 L230 800 L365 812 L540 800 L715 812 L850 800 L905 820 L882 856 L905 886 L836 896 L540 882 L244 896 L175 886 L198 856 Z"
+        fill="#0B2D1E" stroke="url(#goldG)" stroke-width="5" stroke-linejoin="round"/>
+  <line x1="230" y1="800" x2="850" y2="800" stroke="url(#goldG)" stroke-width="3" opacity="0.6"/>
+  <line x1="244" y1="896" x2="836" y2="896" stroke="url(#goldG)" stroke-width="3" opacity="0.6"/>
+
+  <!-- SKILLPIPS text -->
+  <text x="540" y="870" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-weight="700" font-size="72" letter-spacing="8"
+        fill="url(#goldG)" filter="url(#glow)">SKILLPIPS</text>
+</svg>
