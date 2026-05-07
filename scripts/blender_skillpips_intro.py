@@ -42,17 +42,16 @@ scene.render.image_settings.file_format = "PNG"
 scene.render.filepath = os.path.join(FRAMES_DIR, "frame_")
 
 eevee = scene.eevee
-eevee.taa_render_samples    = 64
+eevee.taa_render_samples    = 8     # fast CPU render (~2s/frame)
 eevee.use_bloom             = True
 eevee.bloom_threshold       = 0.35
 eevee.bloom_intensity       = 0.6
 eevee.bloom_radius          = 5.0
 eevee.bloom_knee            = 0.5
-eevee.use_soft_shadows      = True
-eevee.shadow_cube_size      = "1024"
-eevee.shadow_cascade_size   = "1024"
-eevee.use_ssr               = True
-eevee.ssr_quality           = 0.25
+eevee.use_soft_shadows      = False  # skip for speed
+eevee.shadow_cube_size      = "512"
+eevee.shadow_cascade_size   = "512"
+eevee.use_ssr               = False  # skip for speed
 
 # ── Wipe existing objects ─────────────────────────────────────────────────────
 bpy.ops.object.select_all(action="SELECT")
@@ -169,7 +168,7 @@ psphere.name = "ParticleSphere"
 psphere.data.materials.append(gold_mat)
 
 # ── Animated particles (explicit keyframes, no bake needed) ──────────────────
-N_PARTICLES = 140
+N_PARTICLES = 70
 SWIRL_END   = 75     # pure swirl ends
 CONVERGE_END = 162   # fully converged / hidden
 
