@@ -14,12 +14,17 @@
     "react-dom": "19.2.3"
   },
   "devDependencies": {
+    "@remotion/cli": "^4.0.457",
+    "@remotion/renderer": "^4.0.457",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "puppeteer": "^24.43.0",
+    "puppeteer-core": "^24.43.0",
+    "remotion": "^4.0.457",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

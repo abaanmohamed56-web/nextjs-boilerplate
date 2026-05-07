@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import IntroAnimation from "./IntroAnimation";
 
 export const metadata: Metadata = {
@@ -7,5 +8,9 @@ export const metadata: Metadata = {
 };
 
 export default function IntroPage() {
-  return <IntroAnimation />;
+  return (
+    <Suspense fallback={<div style={{ background: "#000", width: "100%", height: "100vh" }} />}>
+      <IntroAnimation />
+    </Suspense>
+  );
 }

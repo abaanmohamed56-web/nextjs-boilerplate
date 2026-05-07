@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
+import { useSearchParams } from "next/navigation";
 import ParticleField from "./ParticleField";
 import ShieldLogo from "./ShieldLogo";
 import "./intro.css";
@@ -25,7 +26,11 @@ const CANDLES = [
 ];
 
 export default function IntroAnimation() {
-  const [ms, setMs] = useState(0);
+  const params = useSearchParams();
+  const autoplay = params?.get("autoplay") === "1";
+  const hideControls = params?.get("hideControls") === "1";
+
+  const [ms, setMs] = useState(autoplay ? 0 : 0);
   const [playing, setPlaying] = useState(false);
   const [done, setDone] = useState(false);
 
@@ -34,6 +39,15 @@ export default function IntroAnimation() {
     setDone(false);
     setPlaying(true);
   }, []);
+
+  // auto-trigger on mount if URL has ?autoplay=1
+  useEffect(() => {
+    if (autoplay) {
+      // small defer so first paint shows the initial state
+      const id = setTimeout(() => start(), 50);
+      return () => clearTimeout(id);
+    }
+  }, [autoplay, start]);
 
   useEffect(() => {
     if (!playing) return;
@@ -388,18 +402,20 @@ export default function IntroAnimation() {
       )}
 
       {/* ── controls ── */}
-      <div className="intro-controls">
-        {!playing && !done && (
-          <button className="intro-btn" onClick={start}>
-            ▶ Play Intro
-          </button>
-        )}
-        {done && (
-          <button className="intro-btn" onClick={start}>
-            ↺ Replay
-          </button>
-        )}
-      </div>
+      {!hideControls && (
+        <div className="intro-controls">
+          {!playing && !done && (
+            <button className="intro-btn" onClick={start}>
+              ▶ Play Intro
+            </button>
+          )}
+          {done && (
+            <button className="intro-btn" onClick={start}>
+              ↺ Replay
+            </button>
+          )}
+        </div>
+      )}
     </div>
   );
 }
