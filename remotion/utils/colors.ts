@@ -1,0 +1,10 @@
+export const GOLD = '#C9A84C';
+export const GOLD_LIGHT = '#F7D977';
+export const GOLD_DIM = '#8B6914';
+export const GOLD_GLOW = 'rgba(201,168,76,0.55)';
+export const GOLD_GLOW_SOFT = 'rgba(201,168,76,0.25)';
+export const DEEP_BLACK = '#040404';
+export const DARK_BG = '#090909';
+export const SCREEN_BLACK = '#070707';
+export const WHITE_SOFT = 'rgba(255,255,255,0.88)';
+export const WHITE_DIM = 'rgba(255,255,255,0.5)';
