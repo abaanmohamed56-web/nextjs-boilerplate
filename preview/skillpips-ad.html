@@ -27,7 +27,6 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
     0 0 60px 15px rgba(201,168,76,.32),
     0 70px 140px rgba(0,0,0,.95);
   position:relative;overflow:visible;
-  transition: box-shadow 1s ease;
 }
 .phone-screen-border{
   position:absolute;top:6px;left:6px;right:6px;bottom:6px;
@@ -61,7 +60,7 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
   box-shadow:0 0 4px rgba(255,100,100,.4);
 }
 
-/* Action button (left top) */
+/* Action button */
 .btn-action{
   position:absolute;top:98px;left:-4px;
   width:4px;height:32px;
@@ -69,7 +68,6 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
   border-radius:2px 0 0 2px;
   box-shadow:-2px 0 4px rgba(0,0,0,.6),inset -1px 0 0 rgba(255,255,255,.06);
 }
-/* Volume Up */
 .btn-vol-up{
   position:absolute;top:144px;left:-4px;
   width:4px;height:58px;
@@ -77,7 +75,6 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
   border-radius:2px 0 0 2px;
   box-shadow:-2px 0 4px rgba(0,0,0,.6),inset -1px 0 0 rgba(255,255,255,.06);
 }
-/* Volume Down */
 .btn-vol-down{
   position:absolute;top:214px;left:-4px;
   width:4px;height:58px;
@@ -85,7 +82,6 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
   border-radius:2px 0 0 2px;
   box-shadow:-2px 0 4px rgba(0,0,0,.6),inset -1px 0 0 rgba(255,255,255,.06);
 }
-/* Power button */
 .btn-power{
   position:absolute;top:144px;right:-4px;
   width:4px;height:88px;
@@ -93,7 +89,6 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
   border-radius:0 2px 2px 0;
   box-shadow:2px 0 4px rgba(0,0,0,.6),inset 1px 0 0 rgba(255,255,255,.06);
 }
-/* Camera Control button */
 .btn-camera-ctrl{
   position:absolute;top:288px;right:-4px;
   width:4px;height:44px;
@@ -101,7 +96,6 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
   border-radius:0 2px 2px 0;
   box-shadow:2px 0 4px rgba(0,0,0,.6),inset 1px 0 0 rgba(255,255,255,.06);
 }
-/* USB-C cutout */
 .usb-c{
   position:absolute;bottom:10px;left:50%;transform:translateX(-50%);
   width:38px;height:8px;
@@ -109,7 +103,6 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
   border-radius:4px;
   box-shadow:0 0 0 1px rgba(255,255,255,.05),inset 0 1px 2px rgba(0,0,0,.8);
 }
-/* Speaker grille left */
 .speaker-left{
   position:absolute;bottom:14px;left:50%;margin-left:-60px;
   display:flex;gap:2.5px;
@@ -119,64 +112,28 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
   background:rgba(255,255,255,.12);
   box-shadow:0 0 0 .5px rgba(0,0,0,.6);
 }
-/* Speaker grille right */
 .speaker-right{
   position:absolute;bottom:14px;left:50%;margin-left:28px;
   display:flex;gap:2.5px;
-}
-
-/* Camera pod */
-.camera-pod{
-  position:absolute;top:16px;right:16px;
-  width:78px;height:78px;
-  background:linear-gradient(135deg,#1a1a1c,#2c2c2e);
-  border-radius:24px;
-  box-shadow:0 0 0 1px rgba(255,255,255,.08),0 4px 16px rgba(0,0,0,.6);
-  display:flex;align-items:center;justify-content:center;
-}
-.camera-pod-inner{
-  width:68px;height:68px;
-  background:linear-gradient(135deg,#111,#222);
-  border-radius:20px;
-  position:relative;
-  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:4px;padding:6px;
-}
-.cam-lens{
-  width:24px;height:24px;border-radius:50%;
-  background:radial-gradient(circle at 35% 35%,#2a2a3a,#050508);
-  box-shadow:0 0 0 1.5px rgba(255,255,255,.12),0 0 0 3px rgba(0,0,0,.6),inset 0 1px 2px rgba(255,255,255,.1);
-  position:relative;
-}
-.cam-lens::after{
-  content:'';position:absolute;top:4px;left:5px;
-  width:6px;height:5px;
-  background:rgba(255,255,255,.25);
-  border-radius:50%;
-  transform:rotate(-30deg);
-}
-.cam-flash{
-  width:10px;height:10px;border-radius:50%;
-  background:radial-gradient(#fffbe0,#d4c060);
-  box-shadow:0 0 4px rgba(255,230,100,.5);
 }
 
 /* ── WALLPAPER: SkillPips Crest ── */
 .wallpaper{
   position:absolute;inset:0;
   display:flex;align-items:center;justify-content:center;
-  background:radial-gradient(ellipse at 50% 40%,#0e2218 0%,#030d07 55%,#000 100%);
+  background:radial-gradient(ellipse at 50% 40%,#0d1a2e 0%,#060a14 55%,#000 100%);
   overflow:hidden;
 }
 .wallpaper svg.crest{
-  width:200px;height:auto;
-  filter:blur(1.2px) brightness(0.7) saturate(0.9);
+  width:210px;height:auto;
+  filter:blur(1.2px) brightness(0.7) saturate(0.85);
   position:absolute;
-  top:50%;left:50%;transform:translate(-50%,-54%);
-  opacity:0.82;
+  top:50%;left:50%;transform:translate(-50%,-52%);
+  opacity:0.85;
 }
 .wallpaper-overlay{
   position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(0,0,0,.28) 0%,rgba(0,0,0,.12) 40%,rgba(0,0,0,.55) 85%,rgba(0,0,0,.78) 100%);
+  background:linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,.10) 38%,rgba(0,0,0,.52) 82%,rgba(0,0,0,.80) 100%);
 }
 .wallpaper-particles{position:absolute;inset:0;overflow:hidden;}
 .wp-particle{
@@ -285,7 +242,6 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
   box-shadow:0 4px 12px rgba(0,0,0,.4);
 }
 .icon-label{font-size:9px;color:#fff;text-align:center;text-shadow:0 1px 3px rgba(0,0,0,.8)}
-
 .tg-icon{
   background:linear-gradient(135deg,#2aabee,#229ed9);
   animation:tgPulse 2s ease-in-out infinite;
@@ -294,8 +250,6 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
   0%,100%{box-shadow:0 4px 12px rgba(0,0,0,.4),0 0 0 0 rgba(42,171,238,.5)}
   50%{box-shadow:0 4px 12px rgba(0,0,0,.4),0 0 0 6px rgba(42,171,238,0)}
 }
-
-/* Gold widget */
 .gold-widget{
   margin:16px;border-radius:16px;
   background:linear-gradient(135deg,rgba(201,168,76,.18),rgba(247,217,119,.08));
@@ -418,8 +372,8 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
 .brand-logo-wrap{
   position:relative;display:flex;flex-direction:column;align-items:center;gap:16px;
 }
-.brand-crest{width:90px;height:auto;animation:crестAppear 1s ease forwards;opacity:0}
-@keyframes crестAppear{
+.brand-crest{width:90px;height:auto;animation:crestAppear 1s ease forwards;opacity:0}
+@keyframes crestAppear{
   0%{opacity:0;transform:scale(.6) translateY(20px)}
   60%{opacity:1;transform:scale(1.05) translateY(-4px)}
   100%{opacity:1;transform:scale(1) translateY(0)}
@@ -459,33 +413,7 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
   box-shadow:0 0 30px rgba(201,168,76,.4);
 }
 
-/* ── PHONE INTRO SCENE ── */
-.intro-scene{
-  position:absolute;inset:0;
-  background:radial-gradient(ellipse at 50% 60%,#0a1a10 0%,#000 70%);
-  display:flex;align-items:center;justify-content:center;
-  overflow:hidden;
-}
-.intro-glow{
-  position:absolute;width:300px;height:300px;
-  border-radius:50%;
-  background:radial-gradient(circle,rgba(201,168,76,.15),transparent 70%);
-  top:50%;left:50%;transform:translate(-50%,-50%);
-  animation:glowPulse 3s ease-in-out infinite;
-}
-@keyframes glowPulse{
-  0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.6}
-  50%{transform:translate(-50%,-50%) scale(1.3);opacity:1}
-}
-.intro-phone-wrap{
-  opacity:0;transform:translateY(30px) scale(.9);
-  animation:phoneEnter 1.2s cubic-bezier(.16,1,.3,1) .4s forwards;
-}
-@keyframes phoneEnter{
-  to{opacity:1;transform:translateY(0) scale(1)}
-}
-
-/* ── PROGRESS BAR ── */
+/* ── PROGRESS + CONTROLS ── */
 .progress-bar{
   position:fixed;bottom:30px;left:50%;transform:translateX(-50%);
   display:flex;gap:8px;z-index:999;
@@ -497,8 +425,6 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
   cursor:pointer;
 }
 .progress-dot.active{background:#C9A84C;width:20px;border-radius:3px}
-
-/* ── CONTROLS ── */
 .controls{
   position:fixed;bottom:50px;left:50%;transform:translateX(-50%);
   display:flex;gap:12px;z-index:999;
@@ -513,29 +439,17 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
 .ctrl-btn:hover{background:rgba(201,168,76,.3)}
 
 /* ── OUTER PAGE ── */
-.page-wrap{
-  display:flex;flex-direction:column;align-items:center;gap:32px;
-}
+.page-wrap{display:flex;flex-direction:column;align-items:center;gap:32px;}
 .page-title{color:rgba(255,255,255,.15);font-size:11px;letter-spacing:.3em;text-transform:uppercase}
 .page-heading{color:#fff;font-size:32px;font-weight:800;letter-spacing:-.02em}
 .page-sub{color:rgba(255,255,255,.3);font-size:12px;margin-top:4px}
 
 /* ── KEYFRAMES ── */
-@keyframes fadeUp{
-  to{opacity:1;transform:translateY(0)}
-}
-@keyframes slideUp{
-  to{opacity:1;transform:translateY(0)}
-}
-@keyframes iconPop{
-  to{opacity:1;transform:scale(1)}
-}
-@keyframes letterUp{
-  to{opacity:1;transform:translateY(0)}
-}
-@keyframes msgSlide{
-  to{opacity:1;transform:translateY(0)}
-}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+@keyframes slideUp{to{opacity:1;transform:translateY(0)}}
+@keyframes iconPop{to{opacity:1;transform:scale(1)}}
+@keyframes letterUp{to{opacity:1;transform:translateY(0)}}
+@keyframes msgSlide{to{opacity:1;transform:translateY(0)}}
 </style>
 </head>
 <body>
@@ -546,16 +460,13 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
     <p class="page-sub">1080 × 1920 · 60 fps · 25 s</p>
   </div>
 
-  <!-- iPhone 17 Pro Max -->
   <div class="phone-wrap">
     <div class="phone">
-      <!-- Side buttons -->
       <div class="btn-action"></div>
       <div class="btn-vol-up"></div>
       <div class="btn-vol-down"></div>
       <div class="btn-power"></div>
       <div class="btn-camera-ctrl"></div>
-      <!-- Bottom -->
       <div class="usb-c"></div>
       <div class="speaker-left">
         <div class="speaker-dot"></div><div class="speaker-dot"></div>
@@ -566,112 +477,130 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
         <div class="speaker-dot"></div><div class="speaker-dot"></div>
       </div>
 
-      <!-- Back camera pod (visible on sides) -->
-      
       <div class="phone-screen-border">
         <div class="phone-screen" id="phoneScreen">
           <div class="dynamic-island"></div>
 
-          <!-- ────── SCENE 1: Phone Intro (scene container) ────── -->
+          <!-- ────── SCENE 1: Lock Screen ────── -->
           <div class="scene active" id="s1">
-            <!-- Wallpaper with crest -->
             <div class="wallpaper">
-              <!-- SkillPips Heraldic Crest SVG -->
-              <svg class="crest" viewBox="0 0 300 360" xmlns="http://www.w3.org/2000/svg">
+              <!-- SkillPips Crest: navy/crimson quadrants, cream gold -->
+              <svg class="crest" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
                 <defs>
-                  <clipPath id="shield">
-                    <path d="M30,18 L270,18 L270,195 C270,258 150,308 150,308 C150,308 30,258 30,195 Z"/>
+                  <clipPath id="sc1">
+                    <path d="M32,20 H268 V205 C268,285 215,325 150,334 C85,325 32,285 32,205 Z"/>
                   </clipPath>
                 </defs>
-                <!-- Shield background quadrants -->
-                <g clip-path="url(#shield)">
-                  <!-- Top-left: dark teal -->
-                  <rect x="30" y="18" width="120" height="139" fill="#1B3B30"/>
-                  <!-- Top-right: dark crimson -->
-                  <rect x="150" y="18" width="120" height="139" fill="#5C1A1A"/>
-                  <!-- Bottom-left: dark crimson -->
-                  <rect x="30" y="157" width="120" height="151" fill="#5C1A1A"/>
-                  <!-- Bottom-right: dark teal -->
-                  <rect x="150" y="157" width="120" height="151" fill="#1B3B30"/>
-                  <!-- Dividers -->
-                  <rect x="30" y="152" width="240" height="8" fill="#C9A84C"/>
-                  <rect x="145" y="18" width="10" height="290" fill="#C9A84C"/>
-                  <!-- Top-left: Bear silhouette -->
-                  <g fill="#C9A84C" opacity="0.9">
+                <g clip-path="url(#sc1)">
+                  <!-- TL: crimson -->
+                  <rect x="32" y="20" width="119" height="145" fill="#8B1A28"/>
+                  <!-- TR: navy -->
+                  <rect x="151" y="20" width="117" height="145" fill="#1B2F48"/>
+                  <!-- BL: navy -->
+                  <rect x="32" y="165" width="119" height="170" fill="#1B2F48"/>
+                  <!-- BR: crimson -->
+                  <rect x="151" y="165" width="117" height="170" fill="#8B1A28"/>
+                  <!-- Gold cross -->
+                  <rect x="32" y="158" width="236" height="14" fill="#E5C876"/>
+                  <rect x="143" y="20" width="14" height="315" fill="#E5C876"/>
+
+                  <!-- BEAR (top-left, on crimson) facing left -->
+                  <g fill="#E5C876">
                     <!-- body -->
-                    <ellipse cx="78" cy="100" rx="28" ry="22"/>
+                    <ellipse cx="80" cy="105" rx="32" ry="22"/>
+                    <!-- rump bump -->
+                    <ellipse cx="107" cy="99" rx="14" ry="17"/>
+                    <!-- shoulder -->
+                    <ellipse cx="56" cy="96" rx="14" ry="12"/>
                     <!-- head -->
-                    <circle cx="60" cy="80" r="16"/>
-                    <!-- ears -->
-                    <circle cx="50" cy="67" r="7"/>
-                    <circle cx="68" cy="65" r="7"/>
+                    <ellipse cx="43" cy="82" rx="18" ry="15"/>
+                    <!-- ear L -->
+                    <circle cx="32" cy="68" r="8"/>
+                    <!-- ear R -->
+                    <circle cx="52" cy="67" r="8"/>
                     <!-- snout -->
-                    <ellipse cx="55" cy="86" rx="9" ry="7"/>
+                    <ellipse cx="29" cy="86" rx="9" ry="7"/>
                     <!-- legs -->
-                    <rect x="55" y="116" width="9" height="18" rx="4"/>
-                    <rect x="74" y="116" width="9" height="18" rx="4"/>
-                    <rect x="92" y="116" width="9" height="18" rx="4"/>
+                    <rect x="57" y="120" width="12" height="22" rx="6"/>
+                    <rect x="73" y="121" width="12" height="21" rx="6"/>
+                    <rect x="88" y="120" width="12" height="22" rx="6"/>
+                    <rect x="104" y="119" width="12" height="21" rx="6"/>
                   </g>
-                  <!-- Top-right: Bull with horns -->
-                  <g fill="#C9A84C" opacity="0.9" transform="translate(150,0)">
+
+                  <!-- BULL (top-right, on navy) charging right -->
+                  <g fill="#E5C876" transform="translate(151,0)">
                     <!-- body -->
-                    <ellipse cx="78" cy="105" rx="32" ry="22"/>
+                    <ellipse cx="71" cy="105" rx="35" ry="23"/>
+                    <!-- neck/chest -->
+                    <ellipse cx="103" cy="95" rx="16" ry="19"/>
                     <!-- head -->
-                    <circle cx="78" cy="82" r="18"/>
-                    <!-- horns -->
-                    <path d="M62,70 Q48,48 40,55" stroke="#C9A84C" stroke-width="6" fill="none" stroke-linecap="round"/>
-                    <path d="M94,70 Q108,48 116,55" stroke="#C9A84C" stroke-width="6" fill="none" stroke-linecap="round"/>
+                    <ellipse cx="114" cy="79" rx="17" ry="15"/>
+                    <!-- left horn -->
+                    <path d="M104,66 C96,46 108,36 118,42" stroke="#E5C876" stroke-width="7" fill="none" stroke-linecap="round"/>
+                    <!-- right horn -->
+                    <path d="M124,65 C132,45 122,35 112,41" stroke="#E5C876" stroke-width="7" fill="none" stroke-linecap="round"/>
+                    <!-- snout -->
+                    <ellipse cx="128" cy="84" rx="8" ry="6"/>
                     <!-- legs -->
-                    <rect x="54" y="120" width="10" height="18" rx="4"/>
-                    <rect x="70" y="120" width="10" height="18" rx="4"/>
-                    <rect x="86" y="120" width="10" height="18" rx="4"/>
-                    <rect x="100" y="120" width="10" height="18" rx="4"/>
+                    <rect x="94" y="120" width="12" height="22" rx="6"/>
+                    <rect x="109" y="121" width="12" height="21" rx="6"/>
+                    <rect x="46" y="120" width="12" height="22" rx="6"/>
+                    <rect x="61" y="121" width="12" height="21" rx="6"/>
+                    <!-- tail -->
+                    <path d="M44,94 Q33,106 37,120" stroke="#E5C876" stroke-width="5" fill="none" stroke-linecap="round"/>
                   </g>
-                  <!-- Bottom-left: Trend arrow (diagonal up-right) -->
-                  <g stroke="#C9A84C" stroke-width="5" fill="none" stroke-linecap="round">
-                    <line x1="44" y1="272" x2="138" y2="175"/>
-                    <polygon points="138,175 118,175 138,195" fill="#C9A84C" stroke="none"/>
+
+                  <!-- Large center S -->
+                  <text x="150" y="178" text-anchor="middle" dominant-baseline="middle"
+                    font-family="Georgia,'Times New Roman',serif" font-size="148" font-weight="bold"
+                    fill="#E5C876" opacity="0.95">S</text>
+
+                  <!-- ARROW bottom-left (on navy) -->
+                  <line x1="50" y1="298" x2="130" y2="193" stroke="#E5C876" stroke-width="5" stroke-linecap="round"/>
+                  <polygon points="130,193 113,200 124,215" fill="#E5C876"/>
+                  <circle cx="66" cy="280" r="5" fill="#E5C876"/>
+                  <circle cx="84" cy="258" r="5" fill="#E5C876"/>
+                  <circle cx="103" cy="236" r="5" fill="#E5C876"/>
+                  <circle cx="121" cy="214" r="5" fill="#E5C876"/>
+
+                  <!-- CANDLESTICKS bottom-right (on crimson) -->
+                  <g transform="translate(151,0)">
+                    <!-- candle 3 (right) -->
+                    <line x1="95" y1="186" x2="95" y2="198" stroke="#E5C876" stroke-width="3"/>
+                    <rect x="88" y="198" width="14" height="54" fill="#C0392B" rx="2"/>
+                    <line x1="95" y1="252" x2="95" y2="264" stroke="#E5C876" stroke-width="3"/>
+                    <!-- candle 2 (middle) -->
+                    <line x1="73" y1="198" x2="73" y2="210" stroke="#E5C876" stroke-width="3"/>
+                    <rect x="66" y="210" width="14" height="44" fill="#C0392B" rx="2"/>
+                    <line x1="73" y1="254" x2="73" y2="266" stroke="#E5C876" stroke-width="3"/>
+                    <!-- candle 1 (left) -->
+                    <line x1="51" y1="220" x2="51" y2="230" stroke="#E5C876" stroke-width="3"/>
+                    <rect x="44" y="230" width="14" height="30" fill="#C0392B" rx="2"/>
+                    <line x1="51" y1="260" x2="51" y2="272" stroke="#E5C876" stroke-width="3"/>
                   </g>
-                  <!-- Bottom-right: Red candlesticks -->
-                  <g transform="translate(150,0)">
-                    <!-- candle 1 -->
-                    <rect x="60" y="210" width="18" height="48" fill="#8B1A1A" rx="2"/>
-                    <line x1="69" y1="200" x2="69" y2="210" stroke="#8B1A1A" stroke-width="3"/>
-                    <line x1="69" y1="258" x2="69" y2="270" stroke="#8B1A1A" stroke-width="3"/>
-                    <!-- candle 2 -->
-                    <rect x="86" y="225" width="18" height="38" fill="#8B1A1A" rx="2"/>
-                    <line x1="95" y1="215" x2="95" y2="225" stroke="#8B1A1A" stroke-width="3"/>
-                    <line x1="95" y1="263" x2="95" y2="273" stroke="#8B1A1A" stroke-width="3"/>
-                    <!-- candle 3 -->
-                    <rect x="112" y="238" width="18" height="28" fill="#8B1A1A" rx="2"/>
-                    <line x1="121" y1="228" x2="121" y2="238" stroke="#8B1A1A" stroke-width="3"/>
-                    <line x1="121" y1="266" x2="121" y2="276" stroke="#8B1A1A" stroke-width="3"/>
-                  </g>
-                  <!-- Center S -->
-                  <text x="150" y="168" text-anchor="middle" dominant-baseline="middle"
-                    font-family="Georgia,serif" font-size="120" font-weight="bold"
-                    fill="#C9A84C" opacity="0.92">S</text>
                 </g>
-                <!-- Shield border -->
-                <path d="M30,18 L270,18 L270,195 C270,258 150,308 150,308 C150,308 30,258 30,195 Z"
-                  fill="none" stroke="#C9A84C" stroke-width="8"/>
-                <path d="M36,24 L264,24 L264,193 C264,252 150,298 150,298 C150,298 36,252 36,193 Z"
-                  fill="none" stroke="rgba(201,168,76,.4)" stroke-width="2.5"/>
+
+                <!-- Shield outer border -->
+                <path d="M32,20 H268 V205 C268,285 215,325 150,334 C85,325 32,285 32,205 Z"
+                  fill="none" stroke="#E5C876" stroke-width="10"/>
+                <!-- Inner border detail -->
+                <path d="M42,30 H258 V203 C258,278 208,314 150,322 C92,314 42,278 42,203 Z"
+                  fill="none" stroke="#E5C876" stroke-width="3" opacity="0.55"/>
+
                 <!-- Banner -->
-                <path d="M20,318 Q22,310 30,310 L270,310 Q278,310 280,318 L272,330 L280,342 Q278,350 270,350 L30,350 Q22,350 20,342 L28,330 Z"
-                  fill="#8B6914"/>
-                <!-- Banner folds -->
-                <path d="M20,318 L28,330 L20,342" fill="#5a4009"/>
-                <path d="M280,318 L272,330 L280,342" fill="#5a4009"/>
-                <!-- Banner gold highlight -->
-                <path d="M30,310 L270,310 L272,330 L270,350 L30,350 L28,330 Z"
-                  fill="none" stroke="rgba(201,168,76,.3)" stroke-width="1"/>
+                <path d="M8,346 Q12,332 30,332 L270,332 Q288,332 292,346 L284,360 L292,375 Q288,390 270,390 L30,390 Q12,390 8,375 L16,360 Z"
+                  fill="#1B2F48"/>
+                <path d="M8,346 Q12,332 30,332 L270,332 Q288,332 292,346 L284,360 L292,375 Q288,390 270,390 L30,390 Q12,390 8,375 L16,360 Z"
+                  fill="none" stroke="#E5C876" stroke-width="4"/>
+                <!-- Fold shadows -->
+                <path d="M8,346 L16,360 L8,375" fill="#0c1925"/>
+                <path d="M292,346 L284,360 L292,375" fill="#0c1925"/>
                 <!-- Banner text -->
-                <text x="150" y="336" text-anchor="middle" dominant-baseline="middle"
-                  font-family="Georgia,serif" font-size="24" font-weight="bold"
-                  fill="#F7D977" letter-spacing="3">SKILLPIPS</text>
+                <text x="150" y="363" text-anchor="middle" dominant-baseline="middle"
+                  font-family="Georgia,'Times New Roman',serif" font-size="29" font-weight="bold"
+                  fill="#E5C876" letter-spacing="5">SKILLPIPS</text>
               </svg>
-              <!-- Wallpaper particles -->
+
               <div class="wallpaper-particles" id="wpParticles"></div>
               <div class="wallpaper-overlay"></div>
             </div>
@@ -681,16 +610,16 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
               <div class="lock-date">Saturday, May 10</div>
               <div class="lock-notifications">
                 <div class="lock-notif">
-                  <div class="notif-icon" style="background:linear-gradient(135deg,#C9A84C,#8B6914)">📊</div>
+                  <div class="notif-icon" style="background:linear-gradient(135deg,#C9A84C,#8B6914)">&#128202;</div>
                   <div class="notif-body">
                     <div class="notif-app">SkillPips</div>
-                    <div class="notif-title">🔥 XAUUSD Long — +187 pips</div>
+                    <div class="notif-title">&#128293; XAUUSD Long — +187 pips</div>
                     <div class="notif-sub">Signal closed in profit</div>
                   </div>
                   <div class="notif-time">now</div>
                 </div>
                 <div class="lock-notif">
-                  <div class="notif-icon" style="background:linear-gradient(135deg,#2aabee,#229ed9)">✈️</div>
+                  <div class="notif-icon" style="background:linear-gradient(135deg,#2aabee,#229ed9)">&#9992;&#65039;</div>
                   <div class="notif-body">
                     <div class="notif-app">Telegram</div>
                     <div class="notif-title">VIP Signal: BUY GBPUSD</div>
@@ -699,7 +628,7 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
                   <div class="notif-time">2m</div>
                 </div>
                 <div class="lock-notif">
-                  <div class="notif-icon" style="background:linear-gradient(135deg,#30d158,#25a244)">💰</div>
+                  <div class="notif-icon" style="background:linear-gradient(135deg,#30d158,#25a244)">&#128176;</div>
                   <div class="notif-body">
                     <div class="notif-app">SkillPips VIP</div>
                     <div class="notif-title">Week 3: +612 pips total</div>
@@ -712,43 +641,45 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
             </div>
           </div>
 
-          <!-- ────── SCENE 2: Home + Telegram tap ────── -->
+          <!-- ────── SCENE 2: Home Screen ────── -->
           <div class="scene" id="s2">
             <div class="wallpaper">
-              <svg class="crest" viewBox="0 0 300 360" xmlns="http://www.w3.org/2000/svg">
-                <defs><clipPath id="shield2"><path d="M30,18 L270,18 L270,195 C270,258 150,308 150,308 C150,308 30,258 30,195 Z"/></clipPath></defs>
-                <g clip-path="url(#shield2)">
-                  <rect x="30" y="18" width="120" height="139" fill="#1B3B30"/><rect x="150" y="18" width="120" height="139" fill="#5C1A1A"/>
-                  <rect x="30" y="157" width="120" height="151" fill="#5C1A1A"/><rect x="150" y="157" width="120" height="151" fill="#1B3B30"/>
-                  <rect x="30" y="152" width="240" height="8" fill="#C9A84C"/><rect x="145" y="18" width="10" height="290" fill="#C9A84C"/>
-                  <g fill="#C9A84C" opacity="0.9"><ellipse cx="78" cy="100" rx="28" ry="22"/><circle cx="60" cy="80" r="16"/><circle cx="50" cy="67" r="7"/><circle cx="68" cy="65" r="7"/><ellipse cx="55" cy="86" rx="9" ry="7"/><rect x="55" y="116" width="9" height="18" rx="4"/><rect x="74" y="116" width="9" height="18" rx="4"/><rect x="92" y="116" width="9" height="18" rx="4"/></g>
-                  <g fill="#C9A84C" opacity="0.9" transform="translate(150,0)"><ellipse cx="78" cy="105" rx="32" ry="22"/><circle cx="78" cy="82" r="18"/><path d="M62,70 Q48,48 40,55" stroke="#C9A84C" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M94,70 Q108,48 116,55" stroke="#C9A84C" stroke-width="6" fill="none" stroke-linecap="round"/><rect x="54" y="120" width="10" height="18" rx="4"/><rect x="70" y="120" width="10" height="18" rx="4"/><rect x="86" y="120" width="10" height="18" rx="4"/><rect x="100" y="120" width="10" height="18" rx="4"/></g>
-                  <g stroke="#C9A84C" stroke-width="5" fill="none" stroke-linecap="round"><line x1="44" y1="272" x2="138" y2="175"/><polygon points="138,175 118,175 138,195" fill="#C9A84C" stroke="none"/></g>
-                  <g transform="translate(150,0)"><rect x="60" y="210" width="18" height="48" fill="#8B1A1A" rx="2"/><line x1="69" y1="200" x2="69" y2="210" stroke="#8B1A1A" stroke-width="3"/><line x1="69" y1="258" x2="69" y2="270" stroke="#8B1A1A" stroke-width="3"/><rect x="86" y="225" width="18" height="38" fill="#8B1A1A" rx="2"/><line x1="95" y1="215" x2="95" y2="225" stroke="#8B1A1A" stroke-width="3"/><line x1="95" y1="263" x2="95" y2="273" stroke="#8B1A1A" stroke-width="3"/><rect x="112" y="238" width="18" height="28" fill="#8B1A1A" rx="2"/><line x1="121" y1="228" x2="121" y2="238" stroke="#8B1A1A" stroke-width="3"/><line x1="121" y1="266" x2="121" y2="276" stroke="#8B1A1A" stroke-width="3"/></g>
-                  <text x="150" y="168" text-anchor="middle" dominant-baseline="middle" font-family="Georgia,serif" font-size="120" font-weight="bold" fill="#C9A84C" opacity="0.92">S</text>
+              <svg class="crest" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+                <defs><clipPath id="sc2"><path d="M32,20 H268 V205 C268,285 215,325 150,334 C85,325 32,285 32,205 Z"/></clipPath></defs>
+                <g clip-path="url(#sc2)">
+                  <rect x="32" y="20" width="119" height="145" fill="#8B1A28"/><rect x="151" y="20" width="117" height="145" fill="#1B2F48"/>
+                  <rect x="32" y="165" width="119" height="170" fill="#1B2F48"/><rect x="151" y="165" width="117" height="170" fill="#8B1A28"/>
+                  <rect x="32" y="158" width="236" height="14" fill="#E5C876"/><rect x="143" y="20" width="14" height="315" fill="#E5C876"/>
+                  <g fill="#E5C876"><ellipse cx="80" cy="105" rx="32" ry="22"/><ellipse cx="107" cy="99" rx="14" ry="17"/><ellipse cx="56" cy="96" rx="14" ry="12"/><ellipse cx="43" cy="82" rx="18" ry="15"/><circle cx="32" cy="68" r="8"/><circle cx="52" cy="67" r="8"/><ellipse cx="29" cy="86" rx="9" ry="7"/><rect x="57" y="120" width="12" height="22" rx="6"/><rect x="73" y="121" width="12" height="21" rx="6"/><rect x="88" y="120" width="12" height="22" rx="6"/><rect x="104" y="119" width="12" height="21" rx="6"/></g>
+                  <g fill="#E5C876" transform="translate(151,0)"><ellipse cx="71" cy="105" rx="35" ry="23"/><ellipse cx="103" cy="95" rx="16" ry="19"/><ellipse cx="114" cy="79" rx="17" ry="15"/><path d="M104,66 C96,46 108,36 118,42" stroke="#E5C876" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M124,65 C132,45 122,35 112,41" stroke="#E5C876" stroke-width="7" fill="none" stroke-linecap="round"/><ellipse cx="128" cy="84" rx="8" ry="6"/><rect x="94" y="120" width="12" height="22" rx="6"/><rect x="109" y="121" width="12" height="21" rx="6"/><rect x="46" y="120" width="12" height="22" rx="6"/><rect x="61" y="121" width="12" height="21" rx="6"/><path d="M44,94 Q33,106 37,120" stroke="#E5C876" stroke-width="5" fill="none" stroke-linecap="round"/></g>
+                  <text x="150" y="178" text-anchor="middle" dominant-baseline="middle" font-family="Georgia,'Times New Roman',serif" font-size="148" font-weight="bold" fill="#E5C876" opacity="0.95">S</text>
+                  <line x1="50" y1="298" x2="130" y2="193" stroke="#E5C876" stroke-width="5" stroke-linecap="round"/><polygon points="130,193 113,200 124,215" fill="#E5C876"/>
+                  <circle cx="66" cy="280" r="5" fill="#E5C876"/><circle cx="84" cy="258" r="5" fill="#E5C876"/><circle cx="103" cy="236" r="5" fill="#E5C876"/><circle cx="121" cy="214" r="5" fill="#E5C876"/>
+                  <g transform="translate(151,0)"><line x1="95" y1="186" x2="95" y2="198" stroke="#E5C876" stroke-width="3"/><rect x="88" y="198" width="14" height="54" fill="#C0392B" rx="2"/><line x1="95" y1="252" x2="95" y2="264" stroke="#E5C876" stroke-width="3"/><line x1="73" y1="198" x2="73" y2="210" stroke="#E5C876" stroke-width="3"/><rect x="66" y="210" width="14" height="44" fill="#C0392B" rx="2"/><line x1="73" y1="254" x2="73" y2="266" stroke="#E5C876" stroke-width="3"/><line x1="51" y1="220" x2="51" y2="230" stroke="#E5C876" stroke-width="3"/><rect x="44" y="230" width="14" height="30" fill="#C0392B" rx="2"/><line x1="51" y1="260" x2="51" y2="272" stroke="#E5C876" stroke-width="3"/></g>
                 </g>
-                <path d="M30,18 L270,18 L270,195 C270,258 150,308 150,308 C150,308 30,258 30,195 Z" fill="none" stroke="#C9A84C" stroke-width="8"/>
-                <path d="M36,24 L264,24 L264,193 C264,252 150,298 150,298 C150,298 36,252 36,193 Z" fill="none" stroke="rgba(201,168,76,.4)" stroke-width="2.5"/>
-                <path d="M20,318 Q22,310 30,310 L270,310 Q278,310 280,318 L272,330 L280,342 Q278,350 270,350 L30,350 Q22,350 20,342 L28,330 Z" fill="#8B6914"/>
-                <path d="M20,318 L28,330 L20,342" fill="#5a4009"/><path d="M280,318 L272,330 L280,342" fill="#5a4009"/>
-                <text x="150" y="336" text-anchor="middle" dominant-baseline="middle" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="#F7D977" letter-spacing="3">SKILLPIPS</text>
+                <path d="M32,20 H268 V205 C268,285 215,325 150,334 C85,325 32,285 32,205 Z" fill="none" stroke="#E5C876" stroke-width="10"/>
+                <path d="M42,30 H258 V203 C258,278 208,314 150,322 C92,314 42,278 42,203 Z" fill="none" stroke="#E5C876" stroke-width="3" opacity="0.55"/>
+                <path d="M8,346 Q12,332 30,332 L270,332 Q288,332 292,346 L284,360 L292,375 Q288,390 270,390 L30,390 Q12,390 8,375 L16,360 Z" fill="#1B2F48"/>
+                <path d="M8,346 Q12,332 30,332 L270,332 Q288,332 292,346 L284,360 L292,375 Q288,390 270,390 L30,390 Q12,390 8,375 L16,360 Z" fill="none" stroke="#E5C876" stroke-width="4"/>
+                <path d="M8,346 L16,360 L8,375" fill="#0c1925"/><path d="M292,346 L284,360 L292,375" fill="#0c1925"/>
+                <text x="150" y="363" text-anchor="middle" dominant-baseline="middle" font-family="Georgia,'Times New Roman',serif" font-size="29" font-weight="bold" fill="#E5C876" letter-spacing="5">SKILLPIPS</text>
               </svg>
               <div class="wallpaper-overlay"></div>
             </div>
             <div class="home-screen">
               <div class="home-icons">
-                <div class="app-icon"><div class="icon-img" style="background:linear-gradient(135deg,#0a84ff,#0066cc)">📱</div><div class="icon-label">Phone</div></div>
-                <div class="app-icon"><div class="icon-img" style="background:linear-gradient(135deg,#30d158,#1a8c3a)">💬</div><div class="icon-label">Messages</div></div>
-                <div class="app-icon"><div class="icon-img" style="background:linear-gradient(135deg,#ff9500,#cc7000)">🗺️</div><div class="icon-label">Maps</div></div>
-                <div class="app-icon"><div class="icon-img" style="background:linear-gradient(135deg,#ff2d55,#cc0033)">🎵</div><div class="icon-label">Music</div></div>
-                <div class="app-icon"><div class="icon-img" style="background:linear-gradient(135deg,#5e5ce6,#3634a3)">📅</div><div class="icon-label">Calendar</div></div>
-                <div class="app-icon"><div class="icon-img" style="background:linear-gradient(135deg,#ff6b35,#e03e00)">📸</div><div class="icon-label">Camera</div></div>
-                <div class="app-icon"><div class="icon-img" style="background:linear-gradient(135deg,#64d2ff,#0071a4)">🌐</div><div class="icon-label">Safari</div></div>
-                <div class="app-icon"><div class="icon-img" style="background:linear-gradient(135deg,#ff9f0a,#cc7a00)">📊</div><div class="icon-label">Stocks</div></div>
-                <div class="app-icon"><div class="icon-img tg-icon">✈️</div><div class="icon-label">Telegram</div></div>
-                <div class="app-icon"><div class="icon-img" style="background:linear-gradient(135deg,#C9A84C,#8B6914)">📈</div><div class="icon-label">SkillPips</div></div>
-                <div class="app-icon"><div class="icon-img" style="background:linear-gradient(135deg,#1c1c1e,#3a3a3c)">⚙️</div><div class="icon-label">Settings</div></div>
-                <div class="app-icon"><div class="icon-img" style="background:linear-gradient(135deg,#30d158,#1e8a38)">💰</div><div class="icon-label">Wallet</div></div>
+                <div class="app-icon"><div class="icon-img" style="background:linear-gradient(135deg,#0a84ff,#0066cc)">&#128241;</div><div class="icon-label">Phone</div></div>
+                <div class="app-icon"><div class="icon-img" style="background:linear-gradient(135deg,#30d158,#1a8c3a)">&#128172;</div><div class="icon-label">Messages</div></div>
+                <div class="app-icon"><div class="icon-img" style="background:linear-gradient(135deg,#ff9500,#cc7000)">&#128506;&#65039;</div><div class="icon-label">Maps</div></div>
+                <div class="app-icon"><div class="icon-img" style="background:linear-gradient(135deg,#ff2d55,#cc0033)">&#127925;</div><div class="icon-label">Music</div></div>
+                <div class="app-icon"><div class="icon-img" style="background:linear-gradient(135deg,#5e5ce6,#3634a3)">&#128197;</div><div class="icon-label">Calendar</div></div>
+                <div class="app-icon"><div class="icon-img" style="background:linear-gradient(135deg,#ff6b35,#e03e00)">&#128248;</div><div class="icon-label">Camera</div></div>
+                <div class="app-icon"><div class="icon-img" style="background:linear-gradient(135deg,#64d2ff,#0071a4)">&#127760;</div><div class="icon-label">Safari</div></div>
+                <div class="app-icon"><div class="icon-img" style="background:linear-gradient(135deg,#ff9f0a,#cc7a00)">&#128202;</div><div class="icon-label">Stocks</div></div>
+                <div class="app-icon"><div class="icon-img tg-icon">&#9992;&#65039;</div><div class="icon-label">Telegram</div></div>
+                <div class="app-icon"><div class="icon-img" style="background:linear-gradient(135deg,#C9A84C,#8B6914)">&#128200;</div><div class="icon-label">SkillPips</div></div>
+                <div class="app-icon"><div class="icon-img" style="background:linear-gradient(135deg,#1c1c1e,#3a3a3c)">&#9881;&#65039;</div><div class="icon-label">Settings</div></div>
+                <div class="app-icon"><div class="icon-img" style="background:linear-gradient(135deg,#30d158,#1e8a38)">&#128176;</div><div class="icon-label">Wallet</div></div>
               </div>
               <div class="gold-widget">
                 <div><div class="widget-label">SkillPips VIP</div><div class="widget-value">+187 pips</div></div>
@@ -763,17 +694,17 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
               <div class="tg-header">
                 <div class="tg-avatar">S</div>
                 <div>
-                  <div class="tg-name">SkillPips VIP 🏆</div>
-                  <div class="tg-status">● online · <span class="tg-members">4,821 members</span></div>
+                  <div class="tg-name">SkillPips VIP &#127942;</div>
+                  <div class="tg-status">&#9679; online · <span class="tg-members">4,821 members</span></div>
                 </div>
               </div>
               <div class="tg-messages">
-                <div class="tg-msg bot">🔔 SIGNAL ALERT<br><strong>XAUUSD — BUY NOW</strong><br>Entry: 2,318.40<br>TP1: 2,332 · TP2: 2,348<br>SL: 2,308</div>
+                <div class="tg-msg bot">&#128276; SIGNAL ALERT<br><strong>XAUUSD — BUY NOW</strong><br>Entry: 2,318.40<br>TP1: 2,332 · TP2: 2,348<br>SL: 2,308</div>
                 <div class="tg-msg user">Entered at 2318.5 ✅</div>
-                <div class="tg-msg bot">📊 TP1 HIT — +187 pips 🔥<br>Move SL to breakeven now</div>
-                <div class="tg-msg user">Secured profit, riding to TP2 💪</div>
-                <div class="tg-msg bot">✅ TRADE CLOSED<br>+312 pips total<br>This is why we trust the system 👑</div>
-                <div class="tg-msg user">Incredible! Best signal service ever 🚀</div>
+                <div class="tg-msg bot">&#128202; TP1 HIT — +187 pips &#128293;<br>Move SL to breakeven now</div>
+                <div class="tg-msg user">Secured profit, riding to TP2 &#128170;</div>
+                <div class="tg-msg bot">✅ TRADE CLOSED<br>+312 pips total<br>This is why we trust the system &#128081;</div>
+                <div class="tg-msg user">Incredible! Best signal service ever &#128640;</div>
               </div>
               <div class="tg-join-bar">
                 <button class="tg-join-btn">JOIN VIP CHANNEL — FREE 7 DAY TRIAL</button>
@@ -791,7 +722,7 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
                   <div class="burst-ring" style="--dur:1.4s;--delay:.9s"></div>
                   <div class="burst-core"></div>
                 </div>
-                <div class="burst-text">YOU'RE IN — WELCOME TO VIP</div>
+                <div class="burst-text">YOU’RE IN — WELCOME TO VIP</div>
               </div>
             </div>
           </div>
@@ -801,19 +732,25 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
             <div class="brand-scene">
               <div class="brand-particles" id="brandParticles"></div>
               <div class="brand-logo-wrap">
-                <!-- Mini crest for brand reveal -->
-                <svg class="brand-crest" viewBox="0 0 300 360" xmlns="http://www.w3.org/2000/svg">
-                  <defs><clipPath id="shield5"><path d="M30,18 L270,18 L270,195 C270,258 150,308 150,308 C150,308 30,258 30,195 Z"/></clipPath></defs>
-                  <g clip-path="url(#shield5)">
-                    <rect x="30" y="18" width="120" height="139" fill="#1B3B30"/><rect x="150" y="18" width="120" height="139" fill="#5C1A1A"/>
-                    <rect x="30" y="157" width="120" height="151" fill="#5C1A1A"/><rect x="150" y="157" width="120" height="151" fill="#1B3B30"/>
-                    <rect x="30" y="152" width="240" height="8" fill="#C9A84C"/><rect x="145" y="18" width="10" height="290" fill="#C9A84C"/>
-                    <text x="150" y="168" text-anchor="middle" dominant-baseline="middle" font-family="Georgia,serif" font-size="120" font-weight="bold" fill="#C9A84C" opacity="0.92">S</text>
+                <svg class="brand-crest" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+                  <defs><clipPath id="sc5"><path d="M32,20 H268 V205 C268,285 215,325 150,334 C85,325 32,285 32,205 Z"/></clipPath></defs>
+                  <g clip-path="url(#sc5)">
+                    <rect x="32" y="20" width="119" height="145" fill="#8B1A28"/><rect x="151" y="20" width="117" height="145" fill="#1B2F48"/>
+                    <rect x="32" y="165" width="119" height="170" fill="#1B2F48"/><rect x="151" y="165" width="117" height="170" fill="#8B1A28"/>
+                    <rect x="32" y="158" width="236" height="14" fill="#E5C876"/><rect x="143" y="20" width="14" height="315" fill="#E5C876"/>
+                    <g fill="#E5C876"><ellipse cx="80" cy="105" rx="32" ry="22"/><ellipse cx="107" cy="99" rx="14" ry="17"/><ellipse cx="56" cy="96" rx="14" ry="12"/><ellipse cx="43" cy="82" rx="18" ry="15"/><circle cx="32" cy="68" r="8"/><circle cx="52" cy="67" r="8"/><ellipse cx="29" cy="86" rx="9" ry="7"/><rect x="57" y="120" width="12" height="22" rx="6"/><rect x="73" y="121" width="12" height="21" rx="6"/><rect x="88" y="120" width="12" height="22" rx="6"/><rect x="104" y="119" width="12" height="21" rx="6"/></g>
+                    <g fill="#E5C876" transform="translate(151,0)"><ellipse cx="71" cy="105" rx="35" ry="23"/><ellipse cx="103" cy="95" rx="16" ry="19"/><ellipse cx="114" cy="79" rx="17" ry="15"/><path d="M104,66 C96,46 108,36 118,42" stroke="#E5C876" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M124,65 C132,45 122,35 112,41" stroke="#E5C876" stroke-width="7" fill="none" stroke-linecap="round"/><ellipse cx="128" cy="84" rx="8" ry="6"/><rect x="94" y="120" width="12" height="22" rx="6"/><rect x="109" y="121" width="12" height="21" rx="6"/><rect x="46" y="120" width="12" height="22" rx="6"/><rect x="61" y="121" width="12" height="21" rx="6"/><path d="M44,94 Q33,106 37,120" stroke="#E5C876" stroke-width="5" fill="none" stroke-linecap="round"/></g>
+                    <text x="150" y="178" text-anchor="middle" dominant-baseline="middle" font-family="Georgia,'Times New Roman',serif" font-size="148" font-weight="bold" fill="#E5C876" opacity="0.95">S</text>
+                    <line x1="50" y1="298" x2="130" y2="193" stroke="#E5C876" stroke-width="5" stroke-linecap="round"/><polygon points="130,193 113,200 124,215" fill="#E5C876"/>
+                    <circle cx="66" cy="280" r="5" fill="#E5C876"/><circle cx="84" cy="258" r="5" fill="#E5C876"/><circle cx="103" cy="236" r="5" fill="#E5C876"/><circle cx="121" cy="214" r="5" fill="#E5C876"/>
+                    <g transform="translate(151,0)"><line x1="95" y1="186" x2="95" y2="198" stroke="#E5C876" stroke-width="3"/><rect x="88" y="198" width="14" height="54" fill="#C0392B" rx="2"/><line x1="95" y1="252" x2="95" y2="264" stroke="#E5C876" stroke-width="3"/><line x1="73" y1="198" x2="73" y2="210" stroke="#E5C876" stroke-width="3"/><rect x="66" y="210" width="14" height="44" fill="#C0392B" rx="2"/><line x1="73" y1="254" x2="73" y2="266" stroke="#E5C876" stroke-width="3"/><line x1="51" y1="220" x2="51" y2="230" stroke="#E5C876" stroke-width="3"/><rect x="44" y="230" width="14" height="30" fill="#C0392B" rx="2"/><line x1="51" y1="260" x2="51" y2="272" stroke="#E5C876" stroke-width="3"/></g>
                   </g>
-                  <path d="M30,18 L270,18 L270,195 C270,258 150,308 150,308 C150,308 30,258 30,195 Z" fill="none" stroke="#C9A84C" stroke-width="8"/>
-                  <path d="M20,318 Q22,310 30,310 L270,310 Q278,310 280,318 L272,330 L280,342 Q278,350 270,350 L30,350 Q22,350 20,342 L28,330 Z" fill="#8B6914"/>
-                  <path d="M20,318 L28,330 L20,342" fill="#5a4009"/><path d="M280,318 L272,330 L280,342" fill="#5a4009"/>
-                  <text x="150" y="336" text-anchor="middle" dominant-baseline="middle" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="#F7D977" letter-spacing="3">SKILLPIPS</text>
+                  <path d="M32,20 H268 V205 C268,285 215,325 150,334 C85,325 32,285 32,205 Z" fill="none" stroke="#E5C876" stroke-width="10"/>
+                  <path d="M42,30 H258 V203 C258,278 208,314 150,322 C92,314 42,278 42,203 Z" fill="none" stroke="#E5C876" stroke-width="3" opacity="0.55"/>
+                  <path d="M8,346 Q12,332 30,332 L270,332 Q288,332 292,346 L284,360 L292,375 Q288,390 270,390 L30,390 Q12,390 8,375 L16,360 Z" fill="#1B2F48"/>
+                  <path d="M8,346 Q12,332 30,332 L270,332 Q288,332 292,346 L284,360 L292,375 Q288,390 270,390 L30,390 Q12,390 8,375 L16,360 Z" fill="none" stroke="#E5C876" stroke-width="4"/>
+                  <path d="M8,346 L16,360 L8,375" fill="#0c1925"/><path d="M292,346 L284,360 L292,375" fill="#0c1925"/>
+                  <text x="150" y="363" text-anchor="middle" dominant-baseline="middle" font-family="Georgia,'Times New Roman',serif" font-size="29" font-weight="bold" fill="#E5C876" letter-spacing="5">SKILLPIPS</text>
                 </svg>
                 <div class="brand-name">
                   <span class="brand-letter">S</span><span class="brand-letter">K</span><span class="brand-letter">I</span><span class="brand-letter">L</span><span class="brand-letter">L</span><span class="brand-letter">P</span><span class="brand-letter">I</span><span class="brand-letter">P</span><span class="brand-letter">S</span>
@@ -829,7 +766,6 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
     </div><!-- /phone -->
   </div><!-- /phone-wrap -->
 
-  <!-- SCENE DOTS -->
   <div class="progress-bar">
     <div class="progress-dot active" onclick="goTo(0)"></div>
     <div class="progress-dot" onclick="goTo(1)"></div>
@@ -844,43 +780,37 @@ html,body{width:100%;height:100%;background:#050505;display:flex;align-items:cen
 </div>
 
 <script>
-// ── Wallpaper particles ──
+// Wallpaper particles
 const wpContainer = document.getElementById('wpParticles');
 for(let i=0;i<18;i++){
   const d=document.createElement('div');
   d.className='wp-particle';
-  const x=Math.random()*100;
-  const y=20+Math.random()*60;
-  d.style.cssText=`left:${x}%;top:${y}%;--dur:${5+Math.random()*6}s;--delay:${Math.random()*8}s;--op:${.3+Math.random()*.5}`;
+  d.style.cssText=`left:${Math.random()*100}%;top:${20+Math.random()*60}%;--dur:${5+Math.random()*6}s;--delay:${Math.random()*8}s;--op:${.3+Math.random()*.5}`;
   wpContainer.appendChild(d);
 }
+
 // Brand particles
 const bpContainer=document.getElementById('brandParticles');
-const angles=[15,45,75,105,135,165,195,225,255,285,315,345,30,60,90,120,150,180,210,240,270,300,330,0];
 for(let i=0;i<24;i++){
+  const a=(i/24)*Math.PI*2;
+  const r=80+Math.random()*60;
   const d=document.createElement('div');
   d.className='brand-particle';
-  const a=(i/24)*360*Math.PI/180;
-  const r=80+Math.random()*60;
-  const sx=Math.cos(a)*r+'px';
-  const sy=Math.sin(a)*r+'px';
-  d.style.cssText=`left:50%;top:50%;--dur:${3+Math.random()*3}s;--delay:${Math.random()*2}s;--sx:${sx};--sy:${sy}`;
+  d.style.cssText=`left:50%;top:50%;--dur:${3+Math.random()*3}s;--delay:${Math.random()*2}s;--sx:${Math.cos(a)*r}px;--sy:${Math.sin(a)*r}px`;
   bpContainer.appendChild(d);
 }
 
-// ── Scene manager ──
+// Scene manager
 const scenes=['s1','s2','s3','s4','s5'];
 const dots=document.querySelectorAll('.progress-dot');
-let cur=0;
 const DURATIONS=[6000,6000,8000,4000,7000];
-let timer=null;
+let cur=0,timer=null;
 
 function goTo(idx){
   clearTimeout(timer);
   document.getElementById(scenes[cur]).classList.remove('active');
   dots[cur].classList.remove('active');
   cur=idx;
-  // Re-trigger animations by cloning
   const el=document.getElementById(scenes[cur]);
   const clone=el.cloneNode(true);
   el.parentNode.replaceChild(clone,el);
@@ -890,15 +820,11 @@ function goTo(idx){
 }
 function next(){goTo((cur+1)%5);}
 function prev(){goTo((cur+4)%5);}
-
-// Auto-advance
-timer=setTimeout(()=>goTo(1),DURATIONS[0]);
-
-// Keyboard nav
 document.addEventListener('keydown',e=>{
   if(e.key==='ArrowRight')next();
   if(e.key==='ArrowLeft')prev();
 });
+timer=setTimeout(()=>goTo(1),DURATIONS[0]);
 </script>
 </body>
 </html>
