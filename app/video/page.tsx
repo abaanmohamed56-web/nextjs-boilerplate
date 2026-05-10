@@ -1,16 +1,41 @@
-import dynamic from "next/dynamic";
+import dynamic from 'next/dynamic';
 
-const VideoPlayer = dynamic(() => import("./VideoPlayer"), { ssr: false });
+const VideoPlayer = dynamic(() => import('./VideoPlayer'), { ssr: false });
 
 export default function VideoPage() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-zinc-50 px-4 dark:bg-black">
-      <h1 className="mb-8 text-3xl font-semibold text-black dark:text-white">
-        Remotion Player
-      </h1>
-      <div className="w-full max-w-4xl">
-        <VideoPlayer />
+    <div
+      style={{ background: '#050505', minHeight: '100vh' }}
+      className="flex flex-col items-center justify-center px-4 py-16"
+    >
+      <div className="mb-10 text-center">
+        <p
+          style={{ color: '#C9A84C', letterSpacing: '0.3em', fontSize: 12, textTransform: 'uppercase' }}
+          className="mb-3"
+        >
+          Remotion · Cinematic Ad
+        </p>
+        <h1
+          style={{
+            color: '#fff',
+            fontSize: 'clamp(28px, 5vw, 48px)',
+            fontWeight: 800,
+            letterSpacing: '-0.02em',
+            lineHeight: 1.1,
+          }}
+        >
+          SkillPips VIP
+        </h1>
+        <p style={{ color: 'rgba(255,255,255,0.4)', marginTop: 8, fontSize: 14 }}>
+          1080 × 1920 · 60 fps · 25 s
+        </p>
       </div>
+
+      <VideoPlayer />
+
+      <p style={{ color: 'rgba(255,255,255,0.2)', marginTop: 24, fontSize: 12, letterSpacing: '0.15em' }}>
+        LIVE SIGNALS · ELITE COMMUNITY · REAL RESULTS
+      </p>
     </div>
   );
 }
